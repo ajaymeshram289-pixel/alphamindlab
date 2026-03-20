@@ -1,42 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>AlphaMindLab</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style>
-    body {margin:0;font-family:sans-serif;background:#020617;color:white;}
-    header {padding:30px;text-align:center;background:#22c55e;font-size:30px;}
-    .container {padding:20px;}
-    .card {
-      background:#0f172a;
-      padding:20px;
-      margin:20px 0;
-      border-radius:10px;
-    }
-    a {color:#22c55e;text-decoration:none;}
-  </style>
-</head>
 
-<body>
-
-<header>AlphaMindLab Blog</header>
-
-<div class="container">
-
-  <div class="card">
-    <h2><a href="article.html">Aalsya ko kaise haraye</a></h2>
-    <p>Mind + Science + Fitness se laziness ko kaise control kare...</p>
-  </div>
-
-  <div class="card">
-    <h2><a href="article2.html">Focus ka Science</a></h2>
-    <p>Dopamine aur focus ka connection samjho...</p>
-  </div>
-
-</div>
-
-</body>
-</html>
 <!DOCTYPE html>
 <html>
 <head>
@@ -56,8 +18,31 @@
       font-size: 36px;
       font-weight: bold;
       background: linear-gradient(90deg,#22c55e,#6366f1);
-    }
+    }<script>
+function searchFunction() {
+  let input = document.getElementById("searchInput").value.toLowerCase();
+  let cards = document.getElementsByClassName("card");
 
+  for (let i = 0; i < cards.length; i++) {
+    let title = cards[i].innerText.toLowerCase();
+    
+    if (title.includes(input)) {
+      cards[i].style.display = "block";
+    } else {
+      cards[i].style.display = "none";
+    }
+  }
+}
+</script>
+<div style="text-align:center; margin:20px;">
+  <input type="text" id="searchInput" placeholder="Search articles..."
+    style="padding:10px; width:70%; max-width:400px; border-radius:5px; border:none;">
+
+  <button onclick="searchFunction()"
+    style="padding:10px 15px; background:#22c55e; color:white; border:none; border-radius:5px;">
+    Search
+  </button>
+</div>
     nav {
       display: flex;
       justify-content: center;
@@ -135,6 +120,116 @@
   <p>Philosophy + Science + Fitness = Success</p>
 </div>
 
+
+
+<header>AlphaMindLab Blog</header>
+
 <div class="container">
 
-  
+  <div class="card">
+    <h2><a href="article.html">Aalsya ko kaise haraye</a></h2>
+    <p>Mind + Science + Fitness se laziness ko kaise control kare...</p>
+  </div>
+
+  <div class="card">
+    <h2><a href="article2.html">Focus ka Science</a></h2>
+    <p>Dopamine aur focus ka connection samjho...</p>
+  </div>
+
+</div>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AlphaMindLab</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      margin:0;
+      font-family:sans-serif;
+      background:#020617;
+      color:white;
+    }
+
+    header {
+      text-align:center;
+      padding:30px;
+      font-size:32px;
+      background:linear-gradient(90deg,#22c55e,#6366f1);
+    }
+
+    .hero {
+      text-align:center;
+      padding:50px 20px;
+    }
+
+    .hero h1 {
+      font-size:40px;
+    }
+
+    .btn {
+      background:#22c55e;
+      padding:10px 20px;
+      border-radius:5px;
+      color:white;
+      text-decoration:none;
+    }
+
+    .container {
+      padding:20px;
+      max-width:900px;
+      margin:auto;
+    }
+
+    .card {
+      background:#0f172a;
+      padding:20px;
+      margin:20px 0;
+      border-radius:12px;
+      transition:0.3s;
+    }
+
+    .card:hover {
+      transform:translateY(-5px);
+      box-shadow:0 0 20px rgba(34,197,94,0.4);
+    }
+
+    img {
+      width:100%;
+      border-radius:10px;
+    }
+
+  </style>
+</head>
+
+<body>
+
+<header>AlphaMindLab</header>
+
+<div class="hero">
+  <h1>Upgrade Your Mind & Body</h1>
+  <p>Philosophy + Science + Fitness</p>
+  <a href="#" class="btn">Follow on Instagram</a>
+</div>
+
+<div class="container">
+
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438">
+    <h2><a href="article.html">Aalsya ko kaise haraye</a></h2>
+    <p>Mind + Science + Fitness approach...</p>
+  </div>
+
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773">
+    <h2><a href="article2.html">Focus ka Science</a></h2>
+    <p>Dopamine aur productivity ka secret...</p>
+  </div>
+
+</div>
+
+</body>
+</html>
+<a href="https://instagram.com/carpediem!13" class="btn">Follow on Instagram</a>
